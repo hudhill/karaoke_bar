@@ -1,13 +1,13 @@
 import unittest
-from src.room import Room
-from src.guest import Guest
+from src.song import Song
 
 class TestSong(unittest.TestCase):
 
     def setUp(self):
         self.song = Song("Du Hast", "Rammstein")
 
-    def song_has_title(self):
-        self.assertEqual("")
+    def test_song_has_title(self):
+        self.assertEqual("Du Hast", self.song.title)
 
-    def song_has_artist(self):
+    def test_song_has_artist(self):
+        self.assertEqual("Rammstein", self.song.artist)
